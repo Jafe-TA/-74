@@ -1,0 +1,39 @@
+<!--
+
+    - Se ingresan por teclado dos números (emplear parseFloat para convertirlos) mostrar un mensaje si 
+    alguno de los dos no es un número (isNaN). Luego si son valores numéricos proceder a multiplicarlos y 
+    verificar si el resultado es finito (isFinite) para mostrar el resultado.
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+var mult;
+var x1;
+x1=prompt('Ingrese su primer valor:','');
+x1=parseFloat(x1);
+var x2;
+x2=prompt('Ingrese su segundo valor:','');
+x2=parseFloat(x1);
+if (isNaN(x1) && isNaN(x2)) //false
+        alert('alguno de los dos no es un número');
+        else{
+            mult=x1*x2;
+if (isFinite(mult)) //true
+        document.write('su multiplicacion tiene un valor finito que es el '+mult);
+else
+    document.write('multiplicacion no tiene un valor finito que es el '+mult);
+    document.write('<br>');
+        }
+
+</script>
+  
+</body>
+</html>
+
